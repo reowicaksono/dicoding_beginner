@@ -1,4 +1,5 @@
 import 'package:dicoding_beginner/views/pages.dart';
+
 import 'package:dicoding_beginner/wrapper.dart';
 import 'package:flutter/material.dart';
 import 'package:dicoding_beginner/utils/app_constants.dart' as AppConst;
@@ -37,6 +38,18 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => LoginPage());
       case AppRoute.ONBOARDING:
         return MaterialPageRoute(builder: (_) => OnboardingScreen());
+      case AppRoute.AKTIVASI_AKUN:
+        return MaterialPageRoute(builder: (_) => AktivasiAkunPage());
+      case AppRoute.FORGOT_PASSWORD:
+        return MaterialPageRoute(builder: (_) => ForgotPasswordPage());
+      case AppRoute.REGISTER_AKUN:
+        return MaterialPageRoute(builder: (_) => RegisterAkun());
+      case AppRoute.DASHBOARD:
+        return MaterialPageRoute(builder: (_) => Dashboard());
+      case AppRoute.DETAIL_ITEMS:
+        return MaterialPageRoute(builder: (_) => DetailItems());
+      case AppRoute.KERANJANG:
+        return MaterialPageRoute(builder: (_) => Keranjang());
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(

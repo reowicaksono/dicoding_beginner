@@ -20,7 +20,12 @@ class _SplashScreenState extends State<SplashScreen> {
 
       print('login : $getLogin onboarding: $getOnboarding');
 
-      if (getLogin || getOnboarding) {
+      if (getLogin && getOnboarding) {
+        var duration = const Duration(seconds: 3);
+        return Timer(duration, () {
+          Navigator.pushReplacementNamed(context, AppRoute.DASHBOARD);
+        });
+      } else if (getLogin || getOnboarding) {
         var duration = const Duration(seconds: 3);
         return Timer(duration, () {
           Navigator.pushReplacementNamed(context, AppRoute.LOGIN_ROUTE);
